@@ -2,12 +2,14 @@ export const formatDate = (date) => {
   if (!date) return "";
 
   const formattedDate = new Date(date);
+
   const day = String(formattedDate.getDate()).padStart(2, "0");
-  const month = String(formattedDate.getMonth() + 1).padStart(2, "0"); // Months are 0-based
+  const month = String(formattedDate.getMonth() + 1).padStart(2, "0");
   const year = formattedDate.getFullYear();
 
-  return `${day}.${month}.${year}`; // Format as DD.MM.YYYY
+  return `${day}.${month}.${year}`;
 };
+
 export const formatTime = (time) => {
   if (!time || typeof time !== "string") return null;
 
@@ -27,7 +29,7 @@ export const formatTime = (time) => {
     date.setMinutes(parseInt(minute, 10));
     date.setSeconds(0);
 
-    return date.toLocaleTimeString("en-US", {
+    return date.toLocaleTimeString("en-IN", {
       hour: "2-digit",
       minute: "2-digit",
       hour12: true,

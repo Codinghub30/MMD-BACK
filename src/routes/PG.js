@@ -199,10 +199,10 @@ router.post("/paytm/callback", async (req, res) => {
     //         };
     //         const response = await axios.post(`http://localhost:9000/api/send-sms?service=${service}`,smsPayload);
 
-    //         console.log("✅ SMS Sent Successfully:", response.data);
+    //         console.log("SMS Sent Successfully:", response.data);
 
     //     } catch (smsError) {
-    //         console.error("❌ SMS Sending Failed:", smsError.response?.data || smsError.message);
+    //         console.error("SMS Sending Failed:", smsError.response?.data || smsError.message);
     //     }
     // }
     console.log(

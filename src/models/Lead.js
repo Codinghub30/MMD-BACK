@@ -50,7 +50,7 @@ const leadSchema = new mongoose.Schema(
     tenantage: { type: String, default: "" },
     tenantsfathername: { type: String, default: "" },
     tenantspermanent_previousaddress: { type: String, default: "" },
-    tenantDistrict:{type:String, default:""},
+    tenantDistrict: { type: String, default: "" },
     tenantaddress: { type: String, default: "" },
     shiftingdate: { type: Date, default: null },
     shiftingaddress: { type: String, default: "" },
@@ -110,7 +110,9 @@ leadSchema.methods.toJSON = function () {
     "dateOfIncorporation",
     "shiftingdate",
     "updatedAt",
-    "createdAt"
+    "createdAt",
+    "date",
+    "dob",
   ];
 
   dateFields.forEach((field) => {
